@@ -1,0 +1,117 @@
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom, #4e54c8, #8f94fb);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://i.pinimg.com/564x/fa/55/3d/fa553deba48eab97f54a82a37f3168dc.jpg'); /* URL de tu imagen */
+    background-size: cover;
+    background-position: center;
+    overflow: hidden; /* Para evitar que la imagen de fondo haga scroll */
+    position: relative;
+}
+
+/* Animación para la imagen de fondo */
+@keyframes fadeInOut {
+    0% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.8;
+    }
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente para el contenido */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    position: relative;
+    z-index: 1; /* Asegura que el contenido esté por encima de la imagen de fondo */
+}
+
+.title {
+    font-size: 32px;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+textarea, button {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    width: calc(100% - 20px);
+    box-sizing: border-box;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    textarea, button {
+        font-size: 14px;
+    }
+}
+
+.encrypt-btn {
+    background-color: #42b883;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 45%;
+}
+
+.decrypt-btn {
+    background-color: #ff5e3a;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 45%;
+    margin-left: 10px;
+}
+
+.copy-btn {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button:hover, button:active {
+    opacity: 0.8;
+}
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    color: #666666;
+    width: 100%;
+}
